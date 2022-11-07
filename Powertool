@@ -79,11 +79,6 @@ $btnOptimize.Add_Click({
        # Getting offical ooshutup10, task run asynchronously to speedup the process
       $dir = (Get-Location).Path + "\OOSU10.exe"
       if( !(Test-Path $dir) ){$ws = New-Object System.Net.WebClient ; $ws.DownloadFileAsync("https://dl5.oo-software.com/files/ooshutup10/OOSU10.exe", $dir)}
-      Write-Host "`n`nTo make setting reversible. Creating Restore Point as a Backup...`nSystem Restore Point is a built-in windows feature" -ForegroundColor Cyan
-      Enable-ComputerRestore -Drive "C:\"
-      REG ADD "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SystemRestore" /V "SystemRestorePointCreationFrequency" /T REG_DWORD /D 0 /F
-      Checkpoint-Computer -Description "Revert Optimization (Automatic)" -RestorePointType "MODIFY_SETTINGS"
-      Write-Host 'RestorePoint has been Created' -ForegroundColor green
 
       Write-Host "`nOptimizing with Recommended Settings."
       Write-Host "Please wait..."
