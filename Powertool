@@ -1292,5 +1292,3 @@ $btnRestore.Add_Click({
 $btnOfficialSite.add_Click({ 
     Start-Process "https://bit.ly/3Fr4ECw"
  })
-
-iex($SecureString)
