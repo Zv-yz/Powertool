@@ -20,7 +20,7 @@ Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName PresentationCore,PresentationFramework
 
 # Loading User interface from link to reduce the initial request size
-iex((New-Object System.Net.WebClient).DownloadString('https://textbin.net/raw/mafed52g7x'))
+iex((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/Zv-yz/Powertool/main/User-interface_2'))
 
 $panelAbout.Controls.AddRange(@($picturebox2,$Laboutdes,$LAbout,$btnOfficialSite))
 $panelsysset.Controls.AddRange(@($btnResetWindowsUpdate,$btnDisNewNinterest,$btnDiskCleanup,$btnDisWebsearch,$btnEnNewNinterest,$btnEnWebsearch,$btnDisNetPer,$btnDisActivityHistory,$btnEnNetPer,$btnEnActivityHistory,$btnDisBackgroundApps,$btnDisActionCenter,$btnEnBackgroundApps,$btnEnActionCenter,$btnUndoTimerResolutio,$btnBalancedMode,$btnSetTimerResolution,$btnUltraPowerMode,$btnDefaultAnimation,$btnDisCortana,$btnQuickAnimation,$btnLightMode,$btnEnCortana,$btnDarkMode,$btnDisPowerThrottli,$btnEnPowerThrottlin,$LNewNinterest,$LNetPerformance,$LUserActivityHistory,$LPowerThrottlingLimit,$LResetUpdate,$LTimerResolution,$LPowerMode,$LBackgroundApps,$LStartmenuWebsearch,$LActionCenter,$LSystemSettings))
@@ -1292,5 +1292,3 @@ $btnRestore.Add_Click({
 $btnOfficialSite.add_Click({ 
     Start-Process "https://bit.ly/3Fr4ECw"
  })
-
-iex($SecureString)
