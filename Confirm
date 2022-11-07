@@ -1,0 +1,70 @@
+Disable-RunspaceDebug;[Console]::TreatControlCAsInput = $true;
+Write-Host " >>> All PowerTool commands are verified.`n" -ForegroundColor Green 
+
+
+$panelRemovalSection.Location = New-Object System.Drawing.Point(250, 0)
+$panelRemovalSection.Name = 'panelRemovalSection'
+$panelRemovalSection.Size = New-Object System.Drawing.Size(610, 547)
+$panelRemovalSection.TabStop = $True
+
+$panelAbout.Location = New-Object System.Drawing.Point(250, 0)
+$panelAbout.Name = 'panelAbout'
+$panelAbout.Size = New-Object System.Drawing.Size(607, 539)
+$panelAbout.TabStop = $True
+
+$panelrestore.Location = New-Object System.Drawing.Point(250, 0)
+$panelrestore.Name = 'panelrestore'
+$panelrestore.Size = New-Object System.Drawing.Size(607, 539)
+$panelrestore.TabStop = $True
+
+$panelsysset.AutoScroll = $True
+$panelsysset.AutoScrollMargin = New-Object System.Drawing.Size(0, 20)
+$panelsysset.AutoSizeMode = 'GrowAndShrink'
+$panelsysset.Location = New-Object System.Drawing.Point(250, 0)
+$panelsysset.Name = 'panelsysset'
+$panelsysset.Size = New-Object System.Drawing.Size(605, 538)
+$panelsysset.TabStop = $True
+
+$panelOptimization.Location = New-Object System.Drawing.Point(250, 0)
+$panelOptimization.Name = 'panelOptimization'
+$panelOptimization.Size = New-Object System.Drawing.Size(610, 546)
+$panelOptimization.TabStop = $True
+
+$panelLogo.BackColor = [System.Drawing.Color]::FromArgb(255, 39, 39, 58)
+$panelLogo.Dock = 'Top'
+$panelLogo.Location = New-Object System.Drawing.Point(0, 0)
+$panelLogo.Name = 'panelLogo'
+$panelLogo.Size = New-Object System.Drawing.Size(250, 110)
+
+$panelMenu.BackColor = [System.Drawing.Color]::FromArgb(255, 51, 51, 76)
+$panelMenu.Dock = 'Left'
+$panelMenu.Location = New-Object System.Drawing.Point(0, 0)
+$panelMenu.Name = 'panelMenu'
+$panelMenu.Size = New-Object System.Drawing.Size(250, 542)
+
+$Ps.AccessibleRole = 'None'
+$Ps.AutoScaleDimensions = New-Object System.Drawing.SizeF(6, 13)
+$Ps.AutoScaleMode = 'Font'
+$Ps.ClientSize = New-Object System.Drawing.Size(854, 542)
+$Ps.MaximumSize = New-Object System.Drawing.Size(870, 577)
+$Ps.MinimumSize = New-Object System.Drawing.Size(870, 577)
+$Ps.Name = 'formWindowsPowertool'
+$Ps.ShowIcon = $False
+$Ps.MaximizeBox = $false
+$Ps.StartPosition = 'CenterScreen'
+$Ps.Text = 'Windows Powertool'
+
+function ShowDialogInProgress (){
+    $Pg.Location = New-Object System.Drawing.Point(0,0)
+    [void]$Ps.hide()
+    [void]$Pg.show()
+    [System.Windows.Forms.Application]::DoEvents()
+}
+function HideDialogInProgress (){
+    [void]$Pg.hide()
+    [System.Windows.Forms.Application]::DoEvents()
+    [void]$Ps.show()
+}
+
+[Console]::TreatControlCAsInput = $true
+[void]$Ps.ShowDialog()
