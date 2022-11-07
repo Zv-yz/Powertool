@@ -31,7 +31,7 @@ $panelMenu.Controls.AddRange(@($btnAbout,$btnBackupRestore,$btnSystemSettings,$b
 $Ps.Controls.AddRange(@($panelMenu,$panelOptimization,$panelRemovalSection,$panelsysset,$panelrestore,$panelAbout))
 $panelLogo.Controls.Add($picturebox1)
 
-Write-Host ' >>> Verifying Powertool commands. So "Piracy" can be prevented' -ForegroundColor cyan
+Write-Host ' >>> Verifying Powertool commands. So "Piracy" can be prevented!' -ForegroundColor cyan
 
 $btnOptimization.add_Click({
         $panelOptimization.Visible = $true
